@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreeMentalConsul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=JetBrains+Mono&family=Poppins:ital,wght@0,100;0,300;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          container: {
+            center: true,
+            padding: "16px",
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            screens: {
+              "2xl": "1320px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+        body {
+          font-family: "Inter", sans-serif;
+        }
+
+        .navbar-fixed {
+          @apply fixed z-[9999] bg-slate-50 bg-opacity-50;
+          backdrop-filter: blur(5px);
+          box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-dark {
+          @apply text-slate-700;
+        }
+
+        .navbar-dark-mobile {
+          @apply text-slate-700;
+        }
+
+        .navbar-light {
+          @apply text-slate-50;
+        }
+
+        .hamburger-dark {
+          @apply bg-slate-700;
+        }
+
+        .hamburger-light {
+          @apply bg-slate-50;
+        }
+
+        .hamburger-line {
+          @apply w-[30px] h-[2px] my-2 block;
+        }
+
+        .hamburger-active > span:nth-child(1) {
+          @apply rotate-45;
+        }
+
+        .hamburger-active > span:nth-child(2) {
+          @apply scale-0;
+        }
+
+        .hamburger-active > span:nth-child(3) {
+          @apply -rotate-45;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a
+              href="#home"
+              class="navbar md:navbar-light font-bold text-lg navbar-light block py-6 italic"
+              >FreeMentalConsul</a
+            >
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="hamburger-line hamburger-light transition duration-300 ease-in-out origin-top-left"
+              ></span>
+              <span
+                class="hamburger-line hamburger-light transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line hamburger-light transition duration-300 ease-in-out origin-bottom-left"
+              ></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="navbar navbar-dark-mobile md:navbar-light py-2 mx-8 flex group-hover:text-[#7abcff]"
+                    >Beranda</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#services"
+                    class="navbar md:navbar-light py-2 mx-8 flex group-hover:text-[#7abcff]"
+                    >Layanan</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#learn"
+                    class="navbar md:navbar-light py-2 mx-8 flex group-hover:text-[#7abcff]"
+                    >Pelajari</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#forum"
+                    class="navbar md:navbar-light py-2 mx-8 flex group-hover:text-[#7abcff]"
+                    >Forum</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#articles"
+                    class="navbar md:navbar-light py-2 mx-8 flex group-hover:text-[#7abcff]"
+                    >Artikel</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="navbar md:navbar-light py-2 mx-8 flex group-hover:text-[#7abcff]"
+                    >Konsultasi</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+    <!-- HERO -->
+    <section
+      id="home"
+      class="h-screen pt-36 bg-gradient-to-br from-[#235A90] to-[#000000]"
+    >
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div data-aos="fade-right" class="w-full self-center px-4 lg:w-1/2">
+            <h1
+              class="text-xl font-semibold text-slate-200 md:text-2xl lg:text-5xl"
+            >
+              Membantu dan Mendukung Kesehatan Mental Anda
+            </h1>
+            <p
+              class="text-base font-thin text-slate-200 mb-5 leading-relaxed md:text-lg md:py-3"
+            >
+              Pemahaman, Dukungan, dan Perubahan. Kami ada untuk Anda
+            </p>
+
+            <a
+              href=""
+              class="text-base bg-slate-50 py-3 px-4 rounded-md text-[#235A90] hover:shadow-lg hover:bg-[#235A90] hover:text-slate-100 duration-300 ease-in-out md:text-lg"
+              >Mulai Konsultasi</a
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="27"
+              viewBox="0 0 27 32"
+              fill="none"
+              class="inline-block"
+            >
+              <path
+                d="M5.19776e-06 2.58334V29.3467C5.19776e-06 31.3875 2.24751 32.6275 3.97834 31.5167L25.0067 18.135C25.3748 17.902 25.6781 17.5797 25.8882 17.198C26.0983 16.8164 26.2085 16.3878 26.2085 15.9521C26.2085 15.5164 26.0983 15.0878 25.8882 14.7061C25.6781 14.3245 25.3748 14.0022 25.0067 13.7692L3.97834 0.413343C3.58869 0.161325 3.13824 0.0191445 2.67452 0.00180154C2.2108 -0.0155414 1.75099 0.0925958 1.34361 0.314806C0.936221 0.537016 0.596363 0.865059 0.359884 1.26433C0.123405 1.6636 -0.000926471 2.1193 5.19776e-06 2.58334Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="mt-12 md:mt-0 md:right-0" data-aos="fade-left">
+              <img
+                src="./img/9534f0adaccec1e62a126a7a5897a1e7.png"
+                alt="consultation"
+                class="max-w-full mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero end -->
+
+    <!-- Services Section Start -->
+    <section id="services" class="pt-36 pb-16 bg-[#D7E6FB]">
+      <div class="container">
+        <div class="w-full px-4">
+          <div data-aos="fade-right" class="max-w-xl mx-auto text-center mb-16">
+            <h2
+              class="font-bold text-[#235A90] text-3xl mb-4 sm:text-4xl lg:text-5xl"
+            >
+              Layanan Kami
+            </h2>
+            <p class="font-normal text-md text-secondary md:text-md">
+              FMC hadir menjadi solusi untuk Anda
+            </p>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-right"
+          data-aos-duration="700"
+          data-aos-easing="ease-in-out"
+          class="flex flex-wrap justify-center"
+        >
+          <div
+            class="w-full max-w-xs bg-gradient-to-br from-[#235A90] to-[#000000] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-5 my-2 xl:my-0 hover:scale-110 duration-300 ease-in-out"
+          >
+            <div class="flex flex-col items-center pb-10 mx-5">
+              <div
+                class="flex items-center justify-center w-24 h-24 rounded-full shadow-lg bg-white mt-10"
+              >
+                <img class="w-16" src="img/1.png" alt="Bonnie image" />
+              </div>
+
+              <h5 class="m-4 text-xl font-medium text-gray-900 dark:text-white">
+                Artikel
+              </h5>
+              <span class="text-sm text-center text-white p-5"
+                >Temukan panduan, saran, dan wawasan yang dapat membantu Anda
+                merawat kesehatan mental Anda dengan baik</span
+              >
+            </div>
+          </div>
+          <div
+            class="w-full max-w-xs bg-gradient-to-br from-[#235A90] to-[#000000] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-5 my-2 xl:my-0 hover:scale-110 duration-300 ease-in-out"
+          >
+            <div class="flex flex-col items-center pb-10 mx-5">
+              <div
+                class="flex items-center justify-center w-24 h-24 rounded-full shadow-lg bg-white mt-10"
+              >
+                <img class="w-16" src="img/2.png" alt="Bonnie image" />
+              </div>
+
+              <h5 class="m-4 text-xl font-medium text-gray-900 dark:text-white">
+                Tes Kesehatan Mental
+              </h5>
+              <span class="text-sm text-center text-white p-5"
+                >Menjawab pertanyaan yang relevan dengan kesehatan mental guna
+                mengukur kesehatan mental Anda</span
+              >
+            </div>
+          </div>
+          <div
+            class="w-full max-w-xs bg-gradient-to-br from-[#235A90] to-[#000000] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-5 my-2 xl:my-0 hover:scale-110 duration-300 ease-in-out"
+          >
+            <div class="flex flex-col items-center pb-10 mx-5">
+              <div
+                class="flex items-center justify-center w-24 h-24 rounded-full shadow-lg bg-white mt-10"
+              >
+                <img class="w-16" src="img/3.png" alt="Bonnie image" />
+              </div>
+
+              <h5 class="m-4 text-xl font-medium text-gray-900 dark:text-white">
+                Grup Diskusi
+              </h5>
+              <span class="text-sm text-center text-white p-5"
+                >Bertukar informasi, mendapatkan perspektif baru, dan berdiskusi
+                mengenai kesehatan mental</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- FMC Existence start -->
+    <section
+      id="learn"
+      class="pt-36 pb-16 bg-gradient-to-br from-[#000000] to-[#235A90]"
+    >
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="mx-auto md:w-1/2">
+            <h2
+              data-aos="fade-right"
+              data-aos-duration="700"
+              class="text-slate-300 text-center font-bold text-center mb-5 text-3xl md:text-start sm:text-4xl lg:text-5xl"
+            >
+              Pelajari
+            </h2>
+            <img
+              data-aos="fade-right"
+              data-aos-duration="700"
+              src="img/stress.jpeg"
+              alt="orang stress"
+              class="md:max-w-xs xl:max-w-xl"
+            />
+          </div>
+          <div
+            data-aos="fade-left"
+            data-aos-duration="700"
+            class="mt-10 text-center md:w-1/2 md:my-auto md:text-start"
+          >
+            <h3
+              class="font-semibold text-slate-200 md:text-2xl mb-5 xl:text-4xl"
+            >
+              FMC Hadir Untuk Anda
+            </h3>
+            <p class="text-slate-200 md:text-xl mb-10">
+              Aman dan Nyaman berbicara tentang masalah yang sedang Anda hadapi.
+              Tanpa perlu khawatir tentang pelanggaran Privasi.
+            </p>
+            <a
+              href=""
+              class="text-base bg-slate-50 py-3 px-4 rounded-md text-[#235A90] hover:shadow-lg hover:bg-[#235A90] hover:text-slate-100 duration-300 ease-in-out md:text-lg"
+              >Pelajari lebih lanjut</a
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="27"
+              viewBox="0 0 27 32"
+              fill="none"
+              class="inline-block"
+            >
+              <path
+                d="M5.19776e-06 2.58334V29.3467C5.19776e-06 31.3875 2.24751 32.6275 3.97834 31.5167L25.0067 18.135C25.3748 17.902 25.6781 17.5797 25.8882 17.198C26.0983 16.8164 26.2085 16.3878 26.2085 15.9521C26.2085 15.5164 26.0983 15.0878 25.8882 14.7061C25.6781 14.3245 25.3748 14.0022 25.0067 13.7692L3.97834 0.413343C3.58869 0.161325 3.13824 0.0191445 2.67452 0.00180154C2.2108 -0.0155414 1.75099 0.0925958 1.34361 0.314806C0.936221 0.537016 0.596363 0.865059 0.359884 1.26433C0.123405 1.6636 -0.000926471 2.1193 5.19776e-06 2.58334Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FMC Existence end -->
+
+    <!-- Forum discussion start -->
+    <section
+      id="forum"
+      class="h-full xl:h-screen pt-36 pb-16 bg-gradient-to-b from-[#D7E6FB] to-[#235a906e]"
+    >
+      <div class="container">
+        <div class="flex flex-wrap flex-col">
+          <h2
+            data-aos="fade-right"
+            class="font-bold text-center text-[#235A90] text-3xl mb-4 sm:text-4xl lg:text-5xl"
+          >
+            Forum Diskusi
+          </h2>
+          <div class="mt-8 self-center">
+            <a
+              href=""
+              class="bg-[#235A90] py-2 px-6 text-xs text-slate-300 rounded-lg shadow-xl border-2 border-[#235A90]"
+              ><span
+                ><img
+                  src="img/arrows.png"
+                  alt=""
+                  class="inline-block w-5" /></span
+              >Sort & View<span
+                ><img
+                  src="img/arrowdown.png"
+                  alt=""
+                  class="ml-2 inline-block w-3" /></span
+            ></a>
+            <a
+              href=""
+              class="py-2 px-4 text-xs rounded-lg text-[#235A90] bg-[#D7E6FB] shadow-xl border-2 border-[#235A90] hover:bg-[#235A90] hover:text-slate-300 duration-300 ease-in-out"
+              >Mulai Diskusi Baru</a
+            >
+          </div>
+          <div class="mt-10 mx-auto flex flex-wrap justify-center">
+            <div
+              class="max-w-sm bg-gradient-to-br from-[#235A90] to-[#000000] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-2 xl:my-0 md:mx-3 mx-auto"
+            >
+              <div class="flex flex-col pb-3 mx-5">
+                <h3
+                  class="mt-5 text-lg font-medium text-gray-900 dark:text-white text-start"
+                >
+                  Anonim
+                </h3>
+                <h4
+                  class="text-xs font-medium text-gray-900 dark:text-white text-start"
+                >
+                  posted 2 min ago
+                </h4>
+
+                <div
+                  class="h-56 text-sm text-start text-slate-500 p-5 bg-[#D7E6FB] rounded-lg mt-2 mb-0"
+                >
+                  <span
+                    class="bg-[#235A90] rounded-lg py-1 px-1 text-slate-200 text-xs"
+                    >Merasa dihindari...</span
+                  >
+                  <p class="mt-2 text-base">
+                    Aku dijauhi teman temanku di kampus
+                  </p>
+                </div>
+                <div class="mt-5 relative flex-none">
+                  <img src="img/comment.png" alt="" class="" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-w-sm bg-gradient-to-br from-[#235A90] to-[#000000] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-2 xl:my-0 md:mx-3 mx-auto"
+            >
+              <div class="flex flex-col pb-3 mx-5">
+                <h3
+                  class="mt-5 text-lg font-medium text-gray-900 dark:text-white text-start"
+                >
+                  Anonim
+                </h3>
+                <h4
+                  class="text-xs font-medium text-gray-900 dark:text-white text-start"
+                >
+                  posted 30 min ago
+                </h4>
+
+                <div
+                  class="h-56 text-sm text-start text-slate-500 p-5 bg-[#D7E6FB] rounded-lg mt-2 mb-0"
+                >
+                  <span
+                    class="bg-[#235A90] rounded-lg py-1 px-1 text-slate-200 text-xs"
+                    >Merasa diremehkan...</span
+                  >
+                  <p class="mt-2 text-base">
+                    Aku dilecehkan teman temanku di kampus
+                  </p>
+                </div>
+                <div class="mt-5 relative flex-none">
+                  <img src="img/comment.png" alt="" class="" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-w-sm bg-gradient-to-br from-[#235A90] to-[#000000] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-2 xl:my-0 md:mx-3 mx-auto"
+            >
+              <div class="flex flex-col pb-3 mx-5">
+                <h3
+                  class="mt-5 text-lg font-medium text-gray-900 dark:text-white text-start"
+                >
+                  Anonim
+                </h3>
+                <h4
+                  class="text-xs font-medium text-gray-900 dark:text-white text-start"
+                >
+                  posted 1 hour ago
+                </h4>
+
+                <div
+                  class="h-56 text-sm text-start text-slate-500 p-5 bg-[#D7E6FB] rounded-lg mt-2 mb-0"
+                >
+                  <span
+                    class="bg-[#235A90] rounded-lg py-1 px-1 text-slate-200 text-xs"
+                    >Merasa ditindas...</span
+                  >
+                  <p class="mt-2 text-base">
+                    Aku dibully teman temanku di kampus
+                  </p>
+                </div>
+                <div class="mt-5 relative flex-none">
+                  <img src="img/comment.png" alt="" class="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center mt-2">
+            <a
+              href=""
+              class="px-12 py-2 bg-[#235A90] rounded-lg border-2 border-[#235A90] text-slate-200 mt-2 hover:bg-[#D7E6FB] hover:text-[#235A90] hover:border-[#235A90] duration-300 ease-in-out"
+              >View All</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Forum discussion end -->
+
+    <!-- Articles start -->
+    <section
+      id="articles"
+      class="h-full xl:h-screen pt-36 pb-16 bg-gradient-to-b from-[#235a906e] to-[#235a909a]"
+    >
+      <div class="container">
+        <div data-aos="zoom-in" class="flex flex-col justify-center">
+          <h2
+            class="font-bold text-center text-white text-3xl mb-4 sm:text-4xl lg:text-5xl"
+          >
+            Artikel
+          </h2>
+          <div class="flex flex-wrap justify-center">
+            <div class="w-full px-4 lg:w-1/3 xl:h-1/4">
+              <div
+                class="bg-slate-200 rounded-xl shadow-lg overflow-hidden mb-10"
+              >
+                <img
+                  src="https://source.unsplash.com/360x200?depression"
+                  alt="Programming"
+                  class="w-full"
+                />
+                <div class="py-8 px-6">
+                  <h3>
+                    <a
+                      href="#"
+                      class="block mb-3 font-semibold text-xl text-slate-800 hover:text-[#235A90] truncate"
+                      >Mengatasi kecemasan dalam keadaan genting</a
+                    >
+                  </h3>
+                  <p class="font-medium text-secondary text-base mb-4">
+                    Pernahkah anda mengalami gejala kecemasan? Tugas menumpuk,
+                    Organisasi banyak kegiatan. JIka pernah mari simak artikel
+                    ini.
+                  </p>
+                  <a
+                    href="#"
+                    class="font-medium text-sm border-2 border-[#235A90] text-white bg-[#235A90] py-2 px-4 rounded-md hover:bg-[#D7E6FB] hover:text-[#235A90] hover:border-[#235A90] duration-300 ease-in-out"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="w-full px-4 lg:w-1/3 xl:h-1/4">
+              <div
+                class="bg-slate-200 rounded-xl shadow-lg overflow-hidden mb-10"
+              >
+                <img
+                  src="https://source.unsplash.com/360x200?lonely"
+                  alt="Programming"
+                  class="w-full"
+                />
+                <div class="py-8 px-6">
+                  <h3>
+                    <a
+                      href="#"
+                      class="block mb-3 font-semibold text-xl text-slate-800 hover:text-[#235A90] truncate"
+                      >Mengatasi kecemasan dalam keadaan genting</a
+                    >
+                  </h3>
+                  <p class="font-medium text-secondary text-base mb-4">
+                    Pernahkah anda mengalami gejala kecemasan? Tugas menumpuk,
+                    Organisasi banyak kegiatan. JIka pernah mari simak artikel
+                    ini.
+                  </p>
+                  <a
+                    href="#"
+                    class="font-medium text-sm border-2 border-[#235A90] text-white bg-[#235A90] py-2 px-4 rounded-md hover:bg-[#D7E6FB] hover:text-[#235A90] hover:border-[#235A90] duration-300 ease-in-out"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="w-full px-4 lg:w-1/3 xl:h-1/4">
+              <div
+                class="bg-slate-200 rounded-xl shadow-lg overflow-hidden mb-10"
+              >
+                <img
+                  src="https://source.unsplash.com/360x200?mental"
+                  alt="Programming"
+                  class="w-full"
+                />
+                <div class="py-8 px-6">
+                  <h3>
+                    <a
+                      href="#"
+                      class="block mb-3 font-semibold text-xl text-slate-800 hover:text-[#235A90] truncate"
+                      >Mengatasi kecemasan dalam keadaan genting</a
+                    >
+                  </h3>
+                  <p class="font-medium text-secondary text-base mb-4">
+                    Pernahkah anda mengalami gejala kecemasan? Tugas menumpuk,
+                    Organisasi banyak kegiatan. JIka pernah mari simak artikel
+                    ini.
+                  </p>
+                  <a
+                    href="#"
+                    class="font-medium text-sm border-2 border-[#235A90] text-white bg-[#235A90] py-2 px-4 rounded-md hover:bg-[#D7E6FB] hover:text-[#235A90] hover:border-[#235A90] duration-300 ease-in-out"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Articles end -->
+
+    <script src="dist/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
